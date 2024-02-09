@@ -1,104 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap");
+
 body {
   background-color: #fffceb;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: "Protest Riot", sans-serif;
 }
 
-.top {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  margin-left: -250px;
-  margin-top: -150px;
-  width: 0;
-  height: 0;
-  border: solid 250px transparent;
-  border-top: solid 150px #fee402;
-  border-bottom: none;
-  z-index: 3;
-  transform-origin: 50% 0;
-  transform: perspective(500);
-  transition: all 2s linear;
-}
-
-.heart {
-  width: 100px;
-  z-index: 5;
-}
-
-.body {
-  position: absolute;
-  left: 50%;
-  top: 60%;
-  width: 500px;
-  height: 300px;
-  margin-left: -250px;
-  margin-top: -150px;
-  background: #fdca00;
-  transition: all 2s linear;
+.container {
+  width: 100vw;
+  height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
+.top {
+  width: 0;
+  height: 0;
+  border: solid 10.5rem transparent;
+  border-top: solid 9.375rem #fee402;
+  border-bottom: none;
+  z-index: 2;
+  transform-origin: 50% 0;
+  transform: perspective(500);
+  transition: all 2s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart {
+  width: 6.25rem;
+  z-index: 3;
+}
+
+.body {
+  width: 80%;
+  height: 20rem;
+  background: #fdca00;
+  transition: all 2s linear;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+
 .content {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  margin-left: -200px;
-  margin-top: -150px;
-  width: 400px;
+  width: 80%;
   height: 0;
   overflow: hidden;
   background: #fffed5;
   background-image: url("images/paper.jpg");
   background-size: cover;
-  background-repeat: repeat-y;
-  z-index: 3;
+  z-index: 4;
   transition: all 1s linear;
 }
 
-.content > p {
-  width: 300px;
-  margin: 0 auto;
+.content p {
+  padding: 0 1rem;
   text-align: left;
-  font-size: 25px;
+  font-size: 1.3rem;
+  line-height: 1.75rem;
   color: #1c1c1c;
-  line-height: 30px;
   text-align: justify;
 }
 
-.body:before {
-  display: block;
-  position: absolute;
-  top: 65%;
-  left: -2%;
-  content: "";
-  background-color: transparent;
-  width: 80px;
-  height: 43px;
-  border-radius: 1%;
-  transform: matrix(2.13, -0.23, 0.33, 1.68, 0, 0);
-  transform-origin: center;
-  z-index: -1;
-}
-
-.body:after {
-  display: block;
-  position: absolute;
-  top: 59%;
-  left: 50%;
-  content: "";
-  background-color: transparent;
-  width: 80px;
-  height: 43px;
-  border-radius: 1%;
-  transform: matrix(-2.17, -0.16, -0.22, 1.71, 0, 0);
-  transform-origin: center;
-  z-index: -1;
-}
-
 .open {
-  transition: all 1s 1s linear;
-  height: 130px;
-  margin-top: -280px;
+  transition: all 3s linear;
+  height: 20rem;
   opacity: 1;
 }

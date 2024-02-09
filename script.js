@@ -4,7 +4,6 @@ $(".heart").on("click", function () {
   $(".content").addClass("open");
 
   setTimeout(function () {
-    $(".body").css("opacity", "0");
     $(".top").css("opacity", "0");
   }, 3000);
 });
