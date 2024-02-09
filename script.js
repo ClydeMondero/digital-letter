@@ -1,4 +1,5 @@
-$(".body").on("click", function () {
+$(".heart").on("click", function () {
+  $(this).css("opacity", "0");
   $(".top").css("transform", "rotateX(180deg)");
   $(".content").addClass("open");
 
