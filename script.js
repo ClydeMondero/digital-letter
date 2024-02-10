@@ -1,6 +1,8 @@
 $(".top").click(function (e) {
   e.preventDefault();
 
+  $("#music")[0].play();
+
   $(this).css("transform", "rotateX(180deg)");
   setTimeout(function () {
     $(".content").addClass("open");
@@ -20,7 +22,7 @@ $(".top").click(function (e) {
       opacity: "0",
       transition: "opacity 2s linear",
     });
-  }, 10000);
+  }, 15000);
 
   setTimeout(function () {
     $(".body").css("display", "none");
@@ -30,5 +32,5 @@ $(".top").click(function (e) {
       display: "block",
       opacity: "1",
     });
-  }, 12000);
+  }, 18000);
 });
